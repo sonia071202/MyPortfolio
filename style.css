@@ -487,14 +487,14 @@ canvas {
 }
 
 
-#sonia {
-    font-size: 3rem;
+/* #sonia {
+    font-size: 3rem; */
     /* color: rgb(207, 178, 178); */
-    color: transparent;
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
+/*     color: transparent;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); */
 
-}
-
+/* } */
+/* 
 #sonia::before {
     content: attr(data-text);
     position: absolute;
@@ -508,8 +508,31 @@ canvas {
     animation: animate 3s linear infinite;
     border-right: 3px solid rgb(255, 255, 255);
 }
+ */
 
-@keyframes animate {
+
+
+#sonia {
+    font-size: 3rem;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    position: relative;
+}
+
+#sonia::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing-fill 3s steps(20) forwards;
+}
+
+/* @keyframes animate {
 
     0%,
     10%,
@@ -520,6 +543,16 @@ canvas {
     70%,
     90% {
         width: 41.2%;
+    }
+}
+ */
+
+@keyframes typing-fill {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
     }
 }
 
