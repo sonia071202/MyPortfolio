@@ -511,12 +511,13 @@ canvas {
  */
 
 
-
 #sonia {
-    font-size: 3rem;
-    color: transparent;
-    -webkit-text-stroke: 1px rgb(255, 255, 255);
     position: relative;
+    font-size: 3rem;
+    color: transparent; /* 👈 Transparent base */
+    -webkit-text-stroke: 1px white; /* 👈 Stroke */
+    font-family: "Lemon", sans-serif; /* Or whatever you are using */
+    z-index: 10;
 }
 
 #sonia::before {
@@ -526,11 +527,30 @@ canvas {
     left: 0;
     width: 0;
     height: 100%;
-    color: white;
+    color: white; /* 👈 Fill color for animated part */
     overflow: hidden;
     white-space: nowrap;
-    animation: typing-fill 3s steps(20) forwards;
+    border-right: 2px solid white;
+    animation: typing 3s steps(10, end) infinite;
 }
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    70% {
+        width: 100%;
+    }
+    90% {
+        width: 100%;
+        border-right: 2px solid transparent;
+    }
+    100% {
+        width: 0;
+        border-right: 2px solid white;
+    }
+}
+
 
 /* @keyframes animate {
 
@@ -547,14 +567,7 @@ canvas {
 }
  */
 
-@keyframes typing-fill {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
-}
+
 
 
 #page1>#right-text {
