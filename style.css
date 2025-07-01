@@ -559,7 +559,7 @@ canvas {
     background-color: white;
     border-radius: 50%;
 }
-/* .circle3{
+.circle3{
     position: absolute;
     top: 72%;
     left: 8.5%;
@@ -567,7 +567,7 @@ canvas {
     width: 2rem;
     background-color: white;
     border-radius: 50%;
-} */
+}
 
 /* experience */
 #experience-side {
