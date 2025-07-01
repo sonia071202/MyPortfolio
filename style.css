@@ -499,7 +499,7 @@ canvas {
     content: attr(data-text);
     position: absolute;
     top: 0;
-    left: 20%;
+    left: 0%;
     width: 0;
     height: 100%;
     color: rgb(255, 255, 255);
